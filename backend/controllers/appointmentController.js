@@ -126,13 +126,18 @@ export const getAppointmentsByPatient =  async (req,res) => {
         if(resolvedCreatedBy) filter.createdBy = resolvedCreatedBy;
         if(req.query.mobile) filter.mobile = req.query.mobile;
 
-        const appointments = (await Appointment.find(filter)).sort({date: 1, time:1}).lean();
+        const appointments = await Appointment.find(filter)
+        .sort({date: 1, time:1}).lean();
         return res.json({success: true, appointments})
     }
     catch (err) {
-        console.error("Appointment",err)
+  console.error(err);
+  return res.status(500).json({
+    success: false,
+    message: "Server error"
+  });
+}
 
-    }
 }
 
 // to create an appointment
@@ -171,11 +176,11 @@ export const createAppointment = async (req, res) => {
         })
     }
 
-     const numericFee = safeNumber(fee ?? fee ?? 0);
+     const numericFee = safeNumber(fee ?? fees ?? 0);
      if(numericFee === null || numericFee < 0) {
         return res.status(400).json({
             success: false,
-            message: "Free must be a valid number"
+            message: "Fee must be a valid number"
         })
      }
 
@@ -185,7 +190,7 @@ export const createAppointment = async (req, res) => {
         createdBy: clerkUserId,
         date: String(date),
         time: String(time),
-        status: {$ne: "Canceled"},
+        status: {$nin: ["Canceled"]},
     }).lean();
 
     if(existingBooking) {
@@ -428,8 +433,13 @@ export const confirmPayment = async (req, res) => {
     return res.json({ success:true, appointment: appt })
     }
     catch (err) {
-        console.error(err)
-    }
+  console.error(err);
+  return res.status(500).json({
+    success: false,
+    message: "Server error"
+  });
+}
+
 }
 
 // to update an appointment
@@ -468,8 +478,13 @@ export const updateAppointment = async (req, res) => {
     return res.json({ success: true, appointment: updated})
     }
     catch (err) {
-        console.error(err)
-    }
+  console.error(err);
+  return res.status(500).json({
+    success: false,
+    message: "Server error"
+  });
+}
+
 }
 
 // to cancel appointment
@@ -482,13 +497,18 @@ export const cancelAppointment = async (req, res) => {
             success: false,
             message: "Appointment not found"
         });
-        appt.status ="cancelled";
+        appt.status ="Canceled";
         await appt.save();
         return res.json({ success: true, appointment: appt })
     }
-     catch (err) {
-        console.error(err)
-    }
+    catch (err) {
+  console.error(err);
+  return res.status(500).json({
+    success: false,
+    message: "Server error"
+  });
+}
+
 }
 
 // to get stats
@@ -508,8 +528,13 @@ export const getStats = async (req, res) => {
         });
     }
        catch (err) {
-        console.error(err)
-           }
+  console.error(err);
+  return res.status(500).json({
+    success: false,
+    message: "Server error"
+  });
+}
+
      }
 
     //  to getAppointments by doctor
@@ -580,9 +605,14 @@ export const  getRegisteredUserCount = async (req, res) => {
         const totalUsers = await clerkClient.users.getCount();
         return res.json({ success:true, totalUsers})
     }
-    catch (err) {
-        console.error(err);
-    }
+   catch (err) {
+  console.error(err);
+  return res.status(500).json({
+    success: false,
+    message: "Server error"
+  });
+}
+
 
     }
 

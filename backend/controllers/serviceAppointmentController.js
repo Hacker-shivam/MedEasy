@@ -122,7 +122,7 @@ export const createServiceAppointment = async (req,res) => {
         hour: Number(finalHour),
         minute: Number(finalMinute),
         ampm: finalAmpm,
-        status: { $ne: "Canceled" },
+        status: { $nin: ["Canceled"] },
       }).lean();
       if (existing) return res.status(409).json({ success: false, message: "You already have a booking for this service at the selected date and time." });
     } catch (chkErr) {
@@ -157,10 +157,19 @@ export const createServiceAppointment = async (req,res) => {
     };
 
     // Free appointment
-    if (numericAmount === 0) {
-      const created = await ServiceAppointment.create({ ...base, status: "Pending", payment: { method: "Cash", status: "Pending", amount: 0, paidAt: new Date() } });
-      return res.status(201).json({ success: true, appointment: created });
+   if (numericAmount === 0) {
+  const created = await ServiceAppointment.create({
+    ...base,
+    status: "Confirmed",
+    payment: {
+      method: "Free",
+      status: "Confirmed",
+      amount: 0,
+      paidAt: new Date()
     }
+  });
+  return res.status(201).json({ success: true, appointment: created });
+}
 
     // Cash booking
     if (paymentMethod === "Cash") {
@@ -457,30 +466,32 @@ export const getServiceAppointmentStats = async (req, res) => {
   }
 };
 
+
+
 // to get appointment for the patient
 export const getServiceAppointmentByPatient = async (req, res) => {
-    try { 
-        const clerkUserId = resolveClerkUserId(req);
-        const { createdBy, mobile} = req.query;
-        const resolvedCreatedBy = createdBy || clerkUserId || null;
-        if(!resolvedCreatedBy && !mobile) return res.json({
-            success: true,
-            data: []
-        });
-        const filter = {};
-        if(resolvedCreatedBy) filter.createdBy = resolvedCreatedBy;
-        if(mobile) filter.mobile = mobile;
+  try {
+    const clerkUserId = resolveClerkUserId(req);
+    const { mobile } = req.query;
 
-        const list = await ServiceAppointment.find(filter).sort({ createdAt: -1}).lean();
-        return res.json({
-            success: true,
-            data: list
-        })
+    console.log("getServiceAppointmentByPatient clerkUserId:", clerkUserId);
+
+    if (!clerkUserId && (!mobile || mobile.trim() === "")) {
+      return res.json({ success: true, data: [] });
     }
-    catch (err) {
+
+    const filter = {};
+    if (clerkUserId) filter.createdBy = clerkUserId;
+    if (mobile && mobile.trim() !== "") filter.mobile = mobile.trim();
+
+    const list = await ServiceAppointment.find(filter).sort({ createdAt: -1 }).lean();
+    return res.json({ success: true, data: list });
+  } catch (err) {
     console.error("getServiceAppointmentByPatient error", err);
     return res.status(500).json({ success: false, message: "Server error" });
-  }}
+  }
+};
+
 
   export default {
     createServiceAppointment,

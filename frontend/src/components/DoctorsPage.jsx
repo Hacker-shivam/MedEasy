@@ -273,6 +273,7 @@ const DoctorsPage = () => {
                     <div className={doctorsPageStyles.noResults}>
                         No doctors found matching your search criteria.
                     </div>
+                    
                   )}
                     </div>
             )}

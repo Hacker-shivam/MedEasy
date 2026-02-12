@@ -2,7 +2,7 @@
 
 export const appointmentPageStyles = {
   // Main container styles
-  pageContainer: "min-h-screen font-serif bg-linear-to-br from-green-50 to-emerald-100 py-10 px-4",
+  pageContainer: "min-h-screen font-serif bg-gradient-to-br from-green-50 to-emerald-100 py-10 px-4",
   maxWidthContainer: "max-w-6xl mx-auto",
   
   // Title styles
@@ -85,7 +85,7 @@ export const bannerStyles = {
   
   // Border outline styles
   borderOutline: "absolute inset-0 rounded-3xl p-[3px] pointer-events-none",
-  outerAnimatedBand: "absolute inset-0 rounded-3xl bg-gradient-to-r from-green-400 via-emerald-500 to-green-400 animate-[spin_3s_linear_infinite] opacity-80",
+  outerAnimatedBand: "absolute inset-0 rounded-3xl bg-gradient-to-r from-green-400 via-emerald-500 to-green-400 animate-[spin_3s_gradient_infinite] opacity-80",
   innerWhiteBorder: "absolute inset-0.5 rounded-3xl bg-white",
   
   // Content container
@@ -266,7 +266,7 @@ export const contactPageStyles = {
   map: "w-full h-56 sm:h-64 md:h-72 lg:h-72 rounded-3xl shadow-2xl border-2 border-emerald-200 hover:shadow-emerald-400 transition-all duration-500",
   
   // Hours container
-  hoursContainer: "bg-gradient-to-br from-emerald-200 to-emerald-100 rounded-2xl p-4 shadow-inner border border-emerald-300",
+  hoursContainer: "bg-gradient-to-br from-emerald-200 to-emerald-100 rounded-2xl p-4 shadow-gradient border border-emerald-300",
   hoursTitle: "text-lg sm:text-xl font-semibold mb-1",
   hoursText: "text-gray-700 text-sm sm:text-md",
   
@@ -355,7 +355,7 @@ export const doctorsPageStyles = {
   
   // Show more button
   showMoreContainer: "flex justify-center mt-8 sm:mt-10",
-  showMoreButton: "flex items-center cursor-pointer gap-2 px-5 py-2.5 bg-linear-to-r from-emerald-400 to-teal-500 text-white rounded-full text-md font-semibold shadow-md hover:shadow-lg transition-all duration-300",
+  showMoreButton: "flex items-center cursor-pointer gap-2 px-5 py-2.5 bg-gradient-to-r from-emerald-400 to-teal-500 text-white rounded-full text-md font-semibold shadow-md hover:shadow-lg transition-all duration-300",
   showMoreIcon: "w-5 h-5",
   
   // Link focus styles
@@ -390,7 +390,7 @@ export const footerStyles = {
   logoWrapper: "relative",
   logoImageContainer: "relative w-16 h-16 md:w-18 md:h-18 lg:w-20 lg:h-20 p-1 transform transition-transform duration-500",
   logoImage: "w-full h-full object-contain",
-  companyName: "text-2xl md:text-3xl lg:text-3xl font-bold bg-linear-to-r from-emerald-600 to-green-700 bg-clip-text text-transparent font-['Poppins'] tracking-tight",
+  companyName: "text-2xl md:text-3xl lg:text-3xl font-bold bg-gradient-to-r from-emerald-600 to-green-700 bg-clip-text text-transparent font-['Poppins'] tracking-tight",
   companyTagline: "text-emerald-600 font-serif text-xs md:text-sm font-semibold tracking-wide mt-1",
   companyDescription: "text-emerald-700 font-serif italic mb-5 leading-relaxed text-sm md:text-base font-light",
   
@@ -431,14 +431,14 @@ export const footerStyles = {
   // Desktop newsletter
   desktopNewsletterContainer: "relative hidden lg:block",
   desktopEmailInput: "w-full px-6 py-4 text-base text-emerald-800 bg-white border-2 border-emerald-200 rounded-full focus:outline-none focus:ring-4 focus:ring-emerald-300 focus:border-emerald-400 transition-all duration-300 transform shadow-lg placeholder-emerald-400",
-  desktopSubscribeButton: "absolute right-2 xl:px-2 top-2 bg-linear-to-r from-emerald-500 to-green-600 text-white px-4 py-2 rounded-full cursor-pointer transition-all duration-300 transform flex items-center shadow-lg hover:shadow-xl",
+  desktopSubscribeButton: "absolute right-2 xl:px-2 top-2 bg-gradient-to-r from-emerald-500 to-green-600 text-white px-4 py-2 rounded-full cursor-pointer transition-all duration-300 transform flex items-center shadow-lg hover:shadow-xl",
   desktopButtonIcon: "w-4 h-4 mr-2",
   desktopButtonText: "font-semibold",
   
   // Social links
   socialContainer: "flex gap-3 justify-center lg:justify-start mt-6",
   socialLink: "relative group",
-  socialIconBackground: "absolute inset-0 bg-linear-to-r from-emerald-400 to-green-500 rounded-full transform scale-0 group-hover:scale-110 transition-transform duration-300 hidden lg:block",
+  socialIconBackground: "absolute inset-0 bg-gradient-to-r from-emerald-400 to-green-500 rounded-full transform scale-0 group-hover:scale-110 transition-transform duration-300 hidden lg:block",
   socialIcon: "w-10 h-10 md:w-11 md:h-11 lg:w-12 lg:h-12 p-2 text-emerald-700 cursor-pointer transform hover:scale-110 hover:rotate-6 transition-all duration-300 relative z-10 bg-white rounded-2xl shadow-lg border-2 border-emerald-100",
   
   // Social icon colors
@@ -615,7 +615,7 @@ export const navbarStyles = {
   logoImageWrapper: "relative flex items-center justify-center overflow-hidden p-2 mx-1 h-full w-full",
   logoImage: "w-14 h-14 sm:w-18 sm:h-18 lg:w-15 lg:h-15 xl:w-24 xl:h-24 md:w-20 md:h-20 object-contain",
   logoTextContainer: "block sm:block",
-  logoTitle: "text-2xl md:text-2xl lg:text-2xl xl:text-2xl font-bold bg-clip-text text-transparent bg-linear-to-r from-emerald-600 to-green-600 tracking-tight",
+  logoTitle: "text-2xl md:text-2xl lg:text-2xl xl:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-emerald-600 to-green-600 tracking-tight",
   logoSubtitle: "text-xs lg:text-xs text-gray-500",
   
   // Desktop navigation
@@ -772,7 +772,7 @@ mobileLoginButton:
 
 export const servicePageStyles = {
   // Page container
-  pageContainer: "min-h-screen py-12 px-6 lg:px-20 font-serif bg-linear-to-b from-emerald-50 to-white",
+  pageContainer: "min-h-screen py-12 px-6 lg:px-20 font-serif bg-gradient-to-b from-emerald-50 to-white",
   maxWidthContainer: "max-w-6xl mx-auto",
   
   // Header
@@ -895,7 +895,7 @@ export const testimonialStyles = {
 
 export const serviceDetailStyles = {
   // Page container
-  pageContainer: "min-h-screen font-serif bg-linear-to-br from-emerald-50 via-white to-green-50 px-4 lg:px-12 pt-20 sm:pt-12 md:pt-8 lg:pt-0",
+  pageContainer: "min-h-screen font-serif bg-gradient-to-br from-emerald-50 via-white to-green-50 px-4 lg:px-12 pt-20 sm:pt-12 md:pt-8 lg:pt-0",
   
   // Navigation bar
   navBar: "backdrop-blur-lg top-0 z-20",
@@ -954,7 +954,7 @@ export const serviceDetailStyles = {
   
   // Right column
   rightColumn: "bg-white/80 rounded-3xl shadow-xl p-6 sm:p-8 border border-white/50 h-fit",
-  serviceName: "text-2xl lg:text-3xl xl:text-3xl md:text-2xl sm:text-4xl font-bold bg-linear-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent",
+  serviceName: "text-2xl lg:text-3xl xl:text-3xl md:text-2xl sm:text-4xl font-bold bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent",
   
   // About section
   aboutContainer: "mt-6 bg-emerald-50 p-5 rounded-xl border border-emerald-100",
@@ -971,7 +971,7 @@ export const serviceDetailStyles = {
   instructionsList: "list-disc pl-6 text-emerald-700 space-y-1",
   
   // Booking summary
-  summaryContainer: "mt-8 bg-linear-to-r from-emerald-50 to-green-50 rounded-2xl p-5 border border-emerald-100",
+  summaryContainer: "mt-8 bg-gradient-to-r from-emerald-50 to-green-50 rounded-2xl p-5 border border-emerald-100",
   summaryTitle: "text-lg font-semibold text-emerald-800 mb-4",
   summaryContent: "space-y-2 text-emerald-700 text-sm sm:text-base",
   summaryItem: "",
@@ -989,7 +989,7 @@ export const serviceDetailStyles = {
 // DoctorDetail styles
 export const doctorDetailStyles = {
   // Main container
-  pageContainer: "min-h-screen font-serif bg-linear-to-br from-emerald-50 via-white to-green-50 relative overflow-hidden",
+  pageContainer: "min-h-screen font-serif bg-gradient-to-br from-emerald-50 via-white to-green-50 relative overflow-hidden",
   
   // Loading/Error states
   loadingContainer: "min-h-screen flex items-center justify-center",
@@ -1013,7 +1013,7 @@ export const doctorDetailStyles = {
   headerBackButton: "inline-flex items-center gap-2 px-2 xl:px-4 lg:px-4 py-2 bg-white text-emerald-600 border border-emerald-200 rounded-full hover:bg-emerald-50 hover:border-emerald-300 transition-all duration-300 shadow-sm hover:shadow-md",
   headerBackButtonIcon: "size={18}",
   headerBackButtonText: "font-medium",
-  headerTitle: "text-sm md:text-2xl lg:text-xl xl:text-2xl whitespace-nowrap font-bold bg-linear-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent",
+  headerTitle: "text-sm md:text-2xl lg:text-xl xl:text-2xl whitespace-nowrap font-bold bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent",
   headerRatingContainer: "flex items-center gap-2 px-2 py-2 bg-white rounded-full shadow-sm border border-amber-100",
   headerRatingIcon: "text-amber-400 fill-current",
   headerRatingText: "font-semibold text-amber-600",
@@ -1030,7 +1030,7 @@ export const doctorDetailStyles = {
   // Left column (avatar)
   leftColumn: "lg:col-span-1 flex flex-col items-center space-y-6",
   avatarContainer: "relative",
-  avatarGlow: "absolute -inset-2 sm:-inset-3 md:-inset-6 bg-linear-to-br from-emerald-400 to-green-400 rounded-full blur-lg opacity-50 animate-pulse",
+  avatarGlow: "absolute -inset-2 sm:-inset-3 md:-inset-6 bg-gradient-to-br from-emerald-400 to-green-400 rounded-full blur-lg opacity-50 animate-pulse",
   avatarImage: "relative w-32 h-32 sm:w-40 sm:h-40 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full object-cover border-4 sm:border-6 md:border-8 border-white shadow-2xl z-10 transition-transform duration-300",
   statsGrid: "grid grid-cols-2 md:grid-cols-2 xl:grid-cols-3 lg:grid-cols-2 gap-4 w-full max-w-lg px-2",
   statBox: "text-center p-3 sm:p-4 bg-white rounded-2xl shadow-lg border border-emerald-50 hover:shadow-xl transition-all duration-300 hover:-translate-y-1",
@@ -1043,8 +1043,8 @@ export const doctorDetailStyles = {
   
   // Right column (doctor info)
   rightColumn: "lg:col-span-2 space-y-6",
-  doctorName: "text-2xl md:text-2xl lg:text-3xl xl:text-3xl sm:text-4xl font-bold bg-linear-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent",
-  specializationBadge: "inline-flex items-center gap-2 px-4 py-2 bg-linear-to-r from-emerald-400 to-green-500 text-white rounded-full text-sm font-semibold shadow-lg",
+  doctorName: "text-2xl md:text-2xl lg:text-3xl xl:text-3xl sm:text-4xl font-bold bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent",
+  specializationBadge: "inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-emerald-400 to-green-500 text-white rounded-full text-sm font-semibold shadow-lg",
   badgeIcon: "w-4 h-4",
   
   // Info grid
@@ -1067,7 +1067,7 @@ export const doctorDetailStyles = {
   appointmentContent: "p-6 sm:p-8",
   appointmentHeader: "flex items-center gap-3 mb-6",
   appointmentIcon: "w-6 h-6 text-emerald-500",
-  appointmentTitle: "text-md md:text-2xl font-bold bg-linear-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent",
+  appointmentTitle: "text-md md:text-2xl font-bold bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent",
   
   // Appointment grid
   appointmentGrid: "grid grid-cols-1 lg:grid-cols-2 gap-6",
@@ -1079,7 +1079,7 @@ export const doctorDetailStyles = {
   dateScrollContainer: "overflow-x-auto -mx-2 px-2",
   dateButtonsContainer: "inline-grid grid-flow-col auto-cols-max gap-3 sm:grid sm:grid-flow-row sm:auto-cols-auto sm:grid-cols-3 md:grid-cols-7 lg:grid-cols-5 xl:grid-cols-6",
   dateButton: "p-2 sm:p-3 rounded-full cursor-pointer border-2 transition-all whitespace-nowrap",
-  dateButtonSelected: "bg-linear-to-br from-emerald-500 to-green-500 text-white border-emerald-500 shadow-lg",
+  dateButtonSelected: "bg-gradient-to-br from-emerald-500 to-green-500 text-white border-emerald-500 shadow-lg",
   dateButtonUnselected: "bg-white text-gray-700 border-emerald-100",
   dateContent: "text-center",
   dateWeekday: "text-xs sm:text-sm opacity-80",
@@ -1101,13 +1101,13 @@ export const doctorDetailStyles = {
   timeSlotsContainer: "flex gap-3 overflow-x-auto sm:grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-2 xl:grid-cols-3",
   noSlotsMessage: "text-gray-500",
   timeSlotButton: "min-w-[140px] p-2 rounded-full border-2",
-  timeSlotButtonSelected: "bg-linear-to-br from-emerald-500 to-green-500 text-white border-emerald-500",
+  timeSlotButtonSelected: "bg-gradient-to-br from-emerald-500 to-green-500 text-white border-emerald-500",
   timeSlotButtonUnselected: "bg-white text-gray-700 border-emerald-100",
   timeSlotContent: "flex items-center justify-center gap-2",
   timeSlotIcon: "w-4 h-4",
   
   // Summary section
-  summaryContainer: "bg-linear-to-r from-emerald-50 to-green-50 p-4 sm:p-6 rounded-2xl border border-emerald-100",
+  summaryContainer: "bg-gradient-to-r from-emerald-50 to-green-50 p-4 sm:p-6 rounded-2xl border border-emerald-100",
   summaryItem: "space-y-3 mb-4 sm:mb-6",
   summaryRow: "flex justify-between",
   summaryLabel: "text-md text-gray-600",

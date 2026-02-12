@@ -12,7 +12,7 @@ import { useLocation } from 'react-router-dom'
 const AppointmentPage = () => {
 
     const API_BASE = "http://localhost:4000"
-    const API = axios.create({baseUrl: API_BASE})
+    const API = axios.create({baseURL: API_BASE})
 
     // Helper function
 
