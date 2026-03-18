@@ -14,6 +14,8 @@ const port = 4000;
 const allowedOrigins = [
   "http://localhost:5173",
   "http://localhost:5174",
+  "https://med-easy-phi.vercel.app",
+  "https://med-easy-qtgd.vercel.app",
 ];
 
 app.use(cors({

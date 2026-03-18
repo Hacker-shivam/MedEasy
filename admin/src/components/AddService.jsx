@@ -4,7 +4,7 @@ import { AlertTriangle, CheckCircle, Clock, XCircle, Image, Plus, Trash2, Calend
 
 const AddService = ({serviceId}) => {
 
-    const API_BASE = "http://localhost:4000";
+    const API_BASE = "https://medeasy-c7j6.onrender.com";
 
      const fileRef = useRef(null);
   const [imagePreview, setImagePreview] = useState(null);

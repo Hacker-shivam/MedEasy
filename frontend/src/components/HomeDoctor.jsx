@@ -5,7 +5,7 @@ import {MousePointer, ChevronRight, Medal } from 'lucide-react'
 
 const HomeDoctor = ({previewCount = 8}) => {
 
-    const API_BASE = 'http://localhost:4000';
+    const API_BASE = 'https://medeasy-c7j6.onrender.com';
     const [doctors, setDoctors] = useState([])
     const [loading, setLoading] =useState(true)
     const [error, setError] = useState("");

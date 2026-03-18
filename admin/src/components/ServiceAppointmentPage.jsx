@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useState } from 'react'
 import { serviceAppointmentsStyles } from '../assets/dummyStyles'
 import { Loader2, SearchIcon, XIcon } from 'lucide-react';
 
-  const API_BASE = "http://localhost:4000";
+  const API_BASE = "https://medeasy-c7j6.onrender.com";
 //   helper function
  function formatTwo(n) {
   return String(n).padStart(2, "0");

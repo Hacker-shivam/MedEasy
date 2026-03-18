@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 const DoctorsPage = () => {
 
-    const API_BASE = 'http://localhost:4000';
+    const API_BASE = 'https://medeasy-c7j6.onrender.com';
 
 
       const [allDoctors, setAllDoctors] = useState([]);
